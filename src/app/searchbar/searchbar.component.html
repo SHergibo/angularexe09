@@ -1,0 +1,18 @@
+<section>
+  <form [formGroup]="loginFormGroup"
+  (ngSubmit)="onSubmit(loginFormGroup.value)">
+    <mat-form-field>
+        <input type="text" matInput placeholder="Track name" [formControl]="loginFormGroup.controls['search']" >
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!loginFormGroup.valid">Search</button>
+  </form>
+</section>
+
+<section class="flex">
+  <div *ngFor="let track of result" class="info">
+    <img src="{{track.album.images[1].url}}" alt="">
+    <a [routerLink]="['/info-track', track.id]">Trackname : {{track.name}}</a>
+    <a [routerLink]="['/info-artist', track.artists[0].id]">Artist : {{track.artists[0].name}}</a>
+    <a [routerLink]="['/info-album', track.album.id]">Album</a>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+<div *ngIf="infos">
+  <p>artist name : {{infos['name']}}</p>
+  <p>genre : </p>
+  <ul>
+    <li *ngFor="let genre of infos['genres']">{{genre}}</li>
+  </ul>
+  <a (click)="back()">back</a>
+</div>

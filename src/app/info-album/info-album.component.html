@@ -1,0 +1,10 @@
+<section>
+  <div *ngIf="infos">
+    <img src="{{infos.images[1].url}}" alt="">
+    <p>Album Name : {{infos['name']}}</p>
+    <ul>
+      <li *ngFor="let track of infos.tracks.items">{{track.name}}</li>
+    </ul>
+  </div>
+  <a (click)="back()">Back</a>
+</section>

@@ -1,0 +1,11 @@
+<section>
+    <div *ngIf="infos">
+      <img src="{{infos.album.images[1].url}}" alt="">
+      <p>Trackname : {{infos['name']}}</p>
+    </div>
+
+    <div *ngIf="infos && infos['preview_url']">
+        <audio controls src="{{infos['preview_url']}}"></audio>
+    </div>
+    <a (click)="back()">Back</a>
+  </section>

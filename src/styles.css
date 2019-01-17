@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.active{
+  color: red;
+}
+
+.info{
+  background: #000;
+  color: #fff;
+  text-align: center;
+  width: 26%;
+  margin-top: 2rem;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex a{
+  display: block;
+  color: #fff;
+}
+
+a{
+  cursor: pointer;
+}
